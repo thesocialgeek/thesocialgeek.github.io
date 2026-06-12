@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Social Geek | Advertising Agency — ATL | BTL | Digital</title>
+  <meta name="description" content="The Social Geek is a full-service advertising agency planning, producing, and running campaigns across ATL, BTL, and Digital for brands in West Africa and Lusophone Africa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1A1A2E;
+      --orange: #E85D04;
+      --orange-light: #FF6B1A;
+      --white: #FFFFFF;
+      --text-muted: #A0A0B0;
+      --border: rgba(232,93,4,0.22);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    .display {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.03em;
+      line-height: 0.95;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5vw;
+      height: 68px;
+      background: rgba(26,26,46,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav-logo span { color: var(--orange); }
+
+    .nav-logo small {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.52rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--orange) !important;
+      color: var(--white) !important;
+      padding: 0.5rem 1.3rem;
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover { background: var(--orange-light) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      padding: 68px 5vw 0;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Diagonal accent line */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 30%;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, var(--orange) 25%, var(--orange) 75%, transparent 100%);
+      opacity: 0.2;
+      transform: skewX(-6deg);
+      pointer-events: none;
+    }
+
+    /* Subtle right glow */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%;
+      height: 100%;
+      background: radial-gradient(ellipse at 80% 50%, rgba(232,93,4,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+      padding: 3rem 0;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .hero-headline {
+      font-size: clamp(3.8rem, 6.5vw, 7.2rem);
+      color: var(--white);
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-headline em {
+      color: var(--orange);
+      font-style: normal;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-sub strong { color: var(--white); font-weight: 600; }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      text-decoration: none;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      text-decoration: none;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+
+    .btn-ghost:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-1px); }
+
+    /* Hero right: three pillars */
+    .hero-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .pillar {
+      border: 1px solid var(--border);
+      border-bottom: none;
+      padding: 1.6rem 2rem;
+      position: relative;
+      transition: background 0.2s;
+    }
+
+    .pillar:last-child { border-bottom: 1px solid var(--border); }
+    .pillar:hover { background: rgba(232,93,4,0.04); }
+
+    .pillar-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .pillar-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .pillar-bar {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--orange);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .pillar:hover .pillar-bar { opacity: 1; }
+
+    /* ── ORANGE STRIP ── */
+    .orange-strip {
+      background: var(--orange);
+      padding: 0.75rem 5vw;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .strip-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      white-space: nowrap;
+    }
+
+    .strip-items {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .strip-item {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 6rem 5vw; }
+
+    .eyebrow {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      color: var(--white);
+      margin-bottom: 1.4rem;
+    }
+
+    .section-body {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-body { max-width: 520px; }
+    .about-body .section-body { margin-bottom: 1rem; }
+    .about-body .section-body strong { color: var(--white); font-weight: 600; }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.8rem;
+    }
+
+    .tag {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2px;
+    }
+
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .about-fact {
+      border: 1px solid var(--border);
+      border-bottom: none;
+      padding: 1.5rem 1.8rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .about-fact:last-child { border-bottom: 1px solid var(--border); }
+
+    .fact-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .fact-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .fact-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: rgba(255,255,255,0.02); }
+
+    .services-header {
+      max-width: 680px;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .svc {
+      background: var(--navy);
+      padding: 2.2rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.2s;
+    }
+
+    .svc:hover { background: rgba(232,93,4,0.04); }
+
+    .svc-tag {
+      display: inline-block;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 1.1rem;
+    }
+
+    .svc-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+      line-height: 1.1;
+    }
+
+    .svc-desc {
+      font-size: 0.8rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+
+    .svc-items {
+      list-style: none;
+      margin-top: 0.8rem;
+    }
+
+    .svc-items li {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      padding: 0.25rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .svc-items li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── WHO WE SERVE ── */
+    #who {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .who-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .who-list li {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .who-list li::before {
+      content: '→';
+      color: var(--orange);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .market-block {
+      background: rgba(232,93,4,0.05);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      padding: 1.6rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .market-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .market-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── BRIEF US ── */
+    #brief {
+      background: var(--orange);
+      text-align: center;
+    }
+
+    #brief .eyebrow { color: rgba(255,255,255,0.65); }
+    #brief .section-title { color: var(--white); max-width: 680px; margin: 0 auto 1.2rem; }
+    #brief .section-body { color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2.5rem; }
+
+    .btn-white {
+      display: inline-block;
+      background: var(--white);
+      color: var(--orange);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+    /* ── CONTACT ── */
+    #contact { background: rgba(255,255,255,0.015); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.5rem;
+    }
+
+    .contact-detail strong {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-detail span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    form { display: flex; flex-direction: column; gap: 1.1rem; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    input, select, textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 0.8rem 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.83rem;
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    input::placeholder, textarea::placeholder { color: rgba(160,160,176,0.45); }
+    select option { background: var(--navy); color: var(--white); }
+    input:focus, select:focus, textarea:focus { border-color: var(--orange); }
+    textarea { resize: vertical; min-height: 120px; }
+
+    .form-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .form-note { font-size: 0.7rem; color: var(--text-muted); }
+
+    .success-msg {
+      display: none;
+      background: rgba(232,93,4,0.1);
+      border: 1px solid var(--orange);
+      border-radius: 2px;
+      padding: 1rem 1.4rem;
+      font-size: 0.82rem;
+      color: var(--white);
+      margin-top: 0.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--border);
+      padding: 2.2rem 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+    }
+
+    .footer-logo span { color: var(--orange); }
+
+    .footer-tagline {
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--orange); }
+
+    .footer-copy { font-size: 0.68rem; color: var(--text-muted); }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      display: block;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: var(--navy);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 5vw;
+      z-index: 99;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover { color: var(--orange); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-pillars { flex-direction: row; display: grid; grid-template-columns: 1fr 1fr 1fr; }
+      .pillar { border-right: none; border-bottom: 1px solid var(--border); }
+      .pillar:last-child { border-right: none; }
+      #about { grid-template-columns: 1fr; gap: 3rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      #who { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    @media (max-width: 640px) {
+      .hero-pillars { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .orange-strip { flex-direction: column; gap: 0.8rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    The Social<span>Geek</span>
+    <small>ATL &nbsp;|&nbsp; BTL &nbsp;|&nbsp; Digital</small>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#who">Who We Serve</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#brief" class="nav-cta">Brief Us</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#who" onclick="closeMenu()">Who We Serve</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#brief" onclick="closeMenu()">Brief Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Full-Service Advertising Agency &mdash; West Africa</p>
+      <h1 class="display hero-headline">
+        Brands Built<br />to Be<br /><em>Remembered</em>
+      </h1>
+      <p class="hero-sub">
+        The Social Geek plans, produces, and runs advertising campaigns across <strong>ATL, BTL, and Digital</strong> for companies entering African markets and brands already here that are ready to grow.
+      </p>
+      <div class="hero-actions">
+        <a href="#brief" class="btn-primary">Brief Us on Your Campaign</a>
+        <a href="#services" class="btn-ghost">What We Do</a>
+      </div>
+    </div>
+    <div class="hero-pillars">
+      <div class="pillar">
+        <div class="pillar-bar"></div>
+        <div class="pillar-label">Above the Line</div>
+        <div class="pillar-name">ATL</div>
+        <div class="pillar-desc">TV, radio, OOH, print, cinema. Mass reach with strategic placement.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-bar"></div>
+        <div class="pillar-label">Below the Line</div>
+        <div class="pillar-name">BTL</div>
+        <div class="pillar-desc">Events, activations, experiential, direct marketing. On-ground impact.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-bar"></div>
+        <div class="pillar-label">Digital</div>
+        <div class="pillar-name">Digital</div>
+        <div class="pillar-desc">Social media, paid search, programmatic, content, influencer.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS STRIP -->
+<div class="orange-strip">
+  <span class="strip-label">Markets</span>
+  <div class="strip-items">
+    <span class="strip-item">Nigeria</span>
+    <span class="strip-item">Ghana</span>
+    <span class="strip-item">Côte d'Ivoire</span>
+    <span class="strip-item">Senegal</span>
+    <span class="strip-item">Angola</span>
+    <span class="strip-item">Mozambique</span>
+    <span class="strip-item">Cape Verde</span>
+    <span class="strip-item">São Tomé</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-body">
+    <p class="eyebrow">Who We Are</p>
+    <h2 class="display section-title">More Than a Presence. A Campaign.</h2>
+    <p class="section-body">
+      The Social Geek is a West African advertising agency built for brands that need <strong>more than visibility</strong>. We build campaigns that are thought through, properly placed, and measured against commercial outcomes.
+    </p>
+    <p class="section-body" style="margin-top: 1rem;">
+      We work across the full advertising mix — from a single OOH rollout in Lagos to integrated ATL, BTL, and Digital campaigns running across multiple markets simultaneously. Our corridor expertise in <strong>West Africa and Lusophone Africa</strong> is a real competitive edge, not a claim.
+    </p>
+    <div class="about-tags">
+      <span class="tag">West Africa</span>
+      <span class="tag">Lusophone Africa</span>
+      <span class="tag">ATL</span>
+      <span class="tag">BTL</span>
+      <span class="tag">Digital</span>
+      <span class="tag">English · French · Portuguese</span>
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="about-fact">
+      <div class="fact-icon">🌍</div>
+      <div>
+        <div class="fact-title">Multi-Market Reach</div>
+        <div class="fact-desc">7+ African markets with active campaign experience. We know the media ecosystems, the cultural nuances, and the distribution dynamics.</div>
+      </div>
+    </div>
+    <div class="about-fact">
+      <div class="fact-icon">📢</div>
+      <div>
+        <div class="fact-title">Full-Service Capability</div>
+        <div class="fact-desc">ATL, BTL, and Digital under one roof. No handoffs, no misaligned agencies. One brief, one team, one outcome.</div>
+      </div>
+    </div>
+    <div class="about-fact">
+      <div class="fact-icon">🗣️</div>
+      <div>
+        <div class="fact-title">Three Languages</div>
+        <div class="fact-desc">English, French, and Portuguese. We brief, negotiate, and create in the language your market needs.</div>
+      </div>
+    </div>
+    <div class="about-fact">
+      <div class="fact-icon">🎯</div>
+      <div>
+        <div class="fact-title">Commercial Focus</div>
+        <div class="fact-desc">Every campaign is built around a business objective. We measure what matters — reach, pipeline, revenue, brand recall.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <p class="eyebrow">What We Do</p>
+    <h2 class="display section-title">Seven Ways We Work</h2>
+    <p class="section-body">We handle every part of the advertising mix, separately or together. Tell us your campaign objective and we'll tell you where to spend and where to save.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc">
+      <span class="svc-tag">ATL</span>
+      <div class="svc-title">Media Buying &amp; Planning</div>
+      <p class="svc-desc">Strategic media placement across TV, radio, OOH, print, and cinema. We negotiate, place, and optimise your above-the-line spend across West African markets.</p>
+      <ul class="svc-items">
+        <li>TV &amp; radio placement</li>
+        <li>OOH site selection and booking</li>
+        <li>Print and cinema advertising</li>
+        <li>Media spend optimisation</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <span class="svc-tag">ATL</span>
+      <div class="svc-title">Out-of-Home (OOH)</div>
+      <p class="svc-desc">Billboard, transit, street furniture, and digital OOH across Lagos, Abuja, Accra, and other major West African cities. Site selection, creative guidance, and traffic reporting.</p>
+      <ul class="svc-items">
+        <li>Billboard and transit media</li>
+        <li>Digital OOH screens</li>
+        <li>Street furniture and ambient</li>
+        <li>Location strategy and footfall data</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <span class="svc-tag">BTL</span>
+      <div class="svc-title">Activations &amp; Events</div>
+      <p class="svc-desc">Brand activations, consumer events, trade events, sponsorship activations, and experiential campaigns. We build the moments people remember and talk about.</p>
+      <ul class="svc-items">
+        <li>Consumer and trade activations</li>
+        <li>Experiential campaigns</li>
+        <li>Sponsorship activation</li>
+        <li>Product launches and roadshows</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <span class="svc-tag">Digital</span>
+      <div class="svc-title">Digital Marketing</div>
+      <p class="svc-desc">Paid social, programmatic display, paid search, content marketing, and influencer programmes. Built around your audience in market — not global templates applied locally.</p>
+      <ul class="svc-items">
+        <li>Meta and Google Ads</li>
+        <li>Programmatic display</li>
+        <li>Influencer marketing</li>
+        <li>Content strategy and production</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <span class="svc-tag">Digital</span>
+      <div class="svc-title">Social Media Marketing</div>
+      <p class="svc-desc">Strategy, content creation, community management, and paid amplification across LinkedIn, Instagram, TikTok, X, and Facebook for B2B and B2C brands.</p>
+      <ul class="svc-items">
+        <li>Platform strategy and content calendars</li>
+        <li>Creative production for social</li>
+        <li>Community management</li>
+        <li>Social advertising and boosting</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <span class="svc-tag">BTL</span>
+      <div class="svc-title">PR &amp; Communications</div>
+      <p class="svc-desc">Media relations, press office, earned media strategy, and crisis communications. We get your brand into conversations it should be leading.</p>
+      <ul class="svc-items">
+        <li>Press releases and media pitching</li>
+        <li>Media relations and press office</li>
+        <li>Thought leadership placement</li>
+        <li>Crisis and reputation management</li>
+      </ul>
+    </div>
+    <div class="svc">
+      <span class="svc-tag">Strategy</span>
+      <div class="svc-title">Marketing Strategy</div>
+      <p class="svc-desc">Campaign strategy, product launches, and go-to-market planning. We build the thinking before the doing — so every channel, message, and rand spent is working toward the same outcome.</p>
+      <ul class="svc-items">
+        <li>Product launch strategy</li>
+        <li>Campaign planning and architecture</li>
+        <li>Go-to-market planning</li>
+        <li>Brand positioning and messaging</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section id="who">
+  <div>
+    <p class="eyebrow">Who We Serve</p>
+    <h2 class="display section-title">Brands with Something to Say</h2>
+    <p class="section-body" style="max-width:500px;">We work with B2B companies and B2C brands. The common thread is a real campaign objective and the commercial appetite to pursue it.</p>
+    <ul class="who-list">
+      <li>Foreign and global brands planning market entry into West Africa or Lusophone Africa</li>
+      <li>Consumer brands — FMCG, telecoms, financial services, retail — that need advertising muscle in-market</li>
+      <li>B2B companies with marketing budgets that need more than digital content to build pipeline</li>
+      <li>Brands that have been running digital-only and are ready to add ATL and BTL to their mix</li>
+      <li>Growth-stage businesses ready to move from startup mode to brand-building mode</li>
+    </ul>
+  </div>
+  <div>
+    <p class="eyebrow" style="margin-bottom:1.4rem;">Our Corridor</p>
+    <div class="market-block">
+      <div class="market-name">West Africa</div>
+      <p class="market-desc">Nigeria, Ghana, Côte d'Ivoire, Senegal, and the ECOWAS corridor. Deep knowledge of media inventory, consumer behaviour, regulatory environment, and cultural nuance across anglophone and francophone markets.</p>
+    </div>
+    <div class="market-block">
+      <div class="market-name">Lusophone Africa</div>
+      <p class="market-desc">Angola, Mozambique, Cape Verde, Guinea-Bissau, and São Tomé e Príncipe. We work natively in Portuguese, understand the media ecosystems, and build campaigns suited to the specific dynamics of each market.</p>
+    </div>
+    <div class="market-block">
+      <div class="market-name">Cross-Market Campaigns</div>
+      <p class="market-desc">Multi-country campaigns with a consistent strategy and localised execution per market. We manage the complexity — language, placement, compliance, timing — so your team can stay focused.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BRIEF US -->
+<section id="brief">
+  <p class="eyebrow">Work With Us</p>
+  <h2 class="display section-title">Ready to Brief Us?</h2>
+  <p class="section-body">Tell us your brand, your market, and your objective. We'll come back with a point of view on how to make it work — no commitment required for the first conversation.</p>
+  <a href="#contact" class="btn-white">Send Us a Brief</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <p class="eyebrow">Get In Touch</p>
+      <h2 class="display section-title" style="font-size: clamp(2rem, 3.5vw, 3.2rem);">Brief Us on Your Campaign</h2>
+      <p class="section-body" style="max-width:400px; margin-bottom:2rem;">Fill in the form with as much context as you can give us. The more specific you are, the more useful our first call will be.</p>
+
+      <div class="contact-detail">
+        <div class="contact-dot"></div>
+        <div>
+          <strong>Email</strong>
+          <span>hello.thesocialgeek@gmail.com</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-dot"></div>
+        <div>
+          <strong>Location</strong>
+          <span>Lekki, Lagos, Nigeria</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-dot"></div>
+        <div>
+          <strong>Instagram &amp; LinkedIn</strong>
+          <span>@the_socialgeek</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Amara" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Okonkwo" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Work Email</label>
+          <input type="email" id="email" name="email" placeholder="amara@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="company">Company / Brand</label>
+          <input type="text" id="company" name="company" placeholder="Company name" />
+        </div>
+        <div class="form-group">
+          <label for="service">What Do You Need?</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="strategy">Marketing Strategy &amp; Campaign Planning</option>
+            <option value="media-buying">Media Buying &amp; Planning</option>
+            <option value="ooh">Out-of-Home (OOH)</option>
+            <option value="activations">Activations &amp; Events</option>
+            <option value="digital">Digital Marketing</option>
+            <option value="social">Social Media Marketing</option>
+            <option value="pr">PR &amp; Communications</option>
+            <option value="integrated">Integrated Campaign (ATL + BTL + Digital)</option>
+            <option value="other">Not Sure — Let's Talk</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="market">Target Market(s)</label>
+          <input type="text" id="market" name="market" placeholder="e.g. Nigeria, Ghana, Angola" />
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Us About Your Campaign</label>
+          <textarea id="message" name="message" placeholder="Your brand, your objective, your timeline, and your approximate budget range. The more context you give us, the better." required></textarea>
+        </div>
+        <div class="form-footer">
+          <p class="form-note">We respond within one business day.</p>
+          <button type="submit" class="btn-primary">Send Brief</button>
+        </div>
+        <div class="success-msg" id="successMsg">
+          Brief received. We will be in touch within one business day.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo">The Social<span>Geek</span></div>
+    <div class="footer-tagline">ATL &nbsp;|&nbsp; BTL &nbsp;|&nbsp; Digital</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#who">Who We Serve</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="mailto:hello.thesocialgeek@gmail.com">Email Us</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 The Social Geek. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('successMsg');
+    // Wire to Formspree: replace action with https://formspree.io/f/YOUR_ID
+    form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
+    msg.style.display = 'block';
+  }
+
+  // Nav highlight on scroll
+  const sectionIds = ['about','services','who','brief','contact'];
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 120) current = id;
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      const href = a.getAttribute('href');
+      a.style.color = href === '#' + current ? 'var(--white)' : '';
+    });
+  });
+</script>
+</body>
+</html>
